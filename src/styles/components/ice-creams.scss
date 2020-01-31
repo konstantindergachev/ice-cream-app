@@ -1,0 +1,67 @@
+.ice__creams {
+  &-cream {
+    border-bottom: 2px solid $main-color;
+    border-top: 1px solid $main-color;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    margin-bottom: 5px;
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: repeat(3, auto);
+    grid-template-areas: "pic name price" "pic descr descr"
+      "pic addToBtn addToBtn";
+    @include respma(1200) {
+      grid-template-columns: repeat(2, auto);
+      grid-template-areas: "pic pic descr" "name name price"
+        "addToBtn addToBtn addToBtn";
+    }
+    @include respma(960) {
+      grid-template-columns: repeat(3, auto);
+      grid-template-areas: "pic name price" "pic descr descr" "pic . addToBtn";
+    }
+    @include respma(760) {
+      grid-template-columns: repeat(3, auto);
+      grid-template-areas: "pic name price" "pic descr descr"
+        "pic addToBtn addToBtn";
+    }
+    @include respma(490) {
+      grid-template-rows: repeat(4, auto);
+      grid-template-columns: repeat(3, auto);
+      grid-template-areas: ". pic ." "name name price" "descr descr descr"
+        "addToBtn addToBtn addToBtn";
+    }
+    p {
+      grid-area: descr;
+      margin: auto;
+      text-align: center;
+      align-self: center;
+      font-size: 1.8rem;
+    }
+  }
+}
+.cream__img {
+  grid-area: pic;
+  width: 150px;
+  margin: auto;
+}
+.cream__name {
+  grid-area: name;
+  align-self: center;
+  text-align: center;
+  @include respma(370) {
+    font-size: 2rem;
+  }
+}
+.cream__price {
+  grid-area: price;
+  font-size: 2rem;
+  align-self: center;
+  margin: auto;
+  @include respma(370) {
+    font-size: 1.5rem;
+  }
+}
+.addToBasket__btn {
+  grid-area: addToBtn;
+  margin-top: 1rem;
+}

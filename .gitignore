@@ -1,0 +1,8 @@
+/.firebase
+/build
+/dist
+/node_modules
+/src/js/data/base.js
+.firebaserc
+firebase.json
+yarn.lock

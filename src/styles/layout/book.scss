@@ -1,0 +1,55 @@
+.book {
+  display: flex;
+  height: 90vh;
+  max-width: 1500px;
+  margin: 0 auto;
+  margin-top: 5vh;
+  perspective: 62.5rem;
+  transform-style: preserve-3d;
+  @include respma(960) {
+    flex-direction: column;
+    height: 95vh;
+  }
+  & > * {
+    padding: 2rem;
+    position: relative;
+    background: $second-color;
+    transition: all 0.3s ease-out;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    overflow: scroll;
+    @include respma(960) {
+      overflow: auto;
+    }
+    &:first-child {
+      border: 1rem double lighten($main-color, 10%);
+      flex-shrink: 1;
+      flex-basis: 50%;
+      transform: translateX(50%) rotateY(6deg) translateX(-50%);
+      @include respma(960) {
+        transform: translateY(50%) rotateX(6deg) translateY(-52%);
+      }
+    }
+    &:nth-child(2) {
+      border: 1rem double lighten($main-color, 10%);
+      transform: translateX(-50%) rotateY(-14deg) translateX(50%);
+      border-left: 0;
+      border-right: 0;
+      min-width: 300px;
+      @include respma(960) {
+        transform: translateY(-50%) rotateX(-14deg) translateY(50%);
+        order: -1;
+      }
+    }
+    &:last-child {
+      border: 1rem double lighten($main-color, 10%);
+      flex-shrink: 1;
+      flex-basis: 50%;
+      transform: translateX(-50%) rotateY(10deg) translateX(50%) scale(1.08)
+        translateX(24px);
+      @include respma(960) {
+        transform: translateY(-63%) rotateX(10deg) translateY(50%)
+          translateY(24px);
+      }
+    }
+  }
+}

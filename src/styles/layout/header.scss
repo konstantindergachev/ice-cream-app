@@ -1,0 +1,36 @@
+.header {
+  text-align: center;
+  margin-bottom: .8rem;
+  &__logo {
+    font-size: 2rem;
+    line-height: 2rem;
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(2, auto);
+    grid-template-areas: "img title" "img text";
+  }
+  &__img {
+    grid-area: img;
+    align-self: center;
+    justify-self: flex-end;
+    width: 100px;
+  }
+  &__title {
+    grid-area: title;
+    font-family: 'Pacifico', cursive;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: $third-color;
+    align-self: flex-end;
+    justify-self: center;
+  }
+  &__text {
+    grid-area: text;
+    font-size: 2rem;
+    position: relative;
+    color: $third-color;
+    align-self: flex-start;
+    justify-self: center;
+  }
+}

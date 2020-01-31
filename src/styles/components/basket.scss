@@ -1,0 +1,32 @@
+.order {
+  &__item {
+    border-bottom: 1px solid $main-color;
+    padding: 2rem 0;
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: 700;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__count {
+    position: relative;
+    overflow: hidden;
+    float: left;
+    transition: all 0.5s ease-out;
+    span {
+      display: inline-block;
+    }
+  }
+  &__btn {
+    border: 0;
+    line-height: 1;
+    padding: 0;
+  }
+}
+.total {
+  font-weight: 700;
+  margin-top: 1rem;
+  @include respma(960) {
+    text-align: center;
+  }
+}

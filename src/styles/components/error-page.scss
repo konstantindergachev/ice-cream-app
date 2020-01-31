@@ -1,0 +1,19 @@
+.error {
+  color: $warning-color;
+  font-weight: 700;
+  &__page {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    &-title {
+      color: $warning-color;
+      text-align: center;
+    }
+  }
+  &__message {
+    @include center-position(50%);
+    font-weight: 700;
+    color: $warning-color;
+  }
+}

@@ -1,0 +1,23 @@
+.enter {
+  background: $second-color;
+  max-width: 500px;
+  margin: auto;
+  padding: 2rem;
+  border: 2px solid $main-color;
+  &__input,
+  &__btn {
+    width: 100%;
+    &[type="text"] {
+      border: 1px solid $main-color;
+      text-align: center;
+      font-size: 3rem;
+    }
+  }
+}
+.greeting__title,
+.greeting__text {
+  text-transform: uppercase;
+}
+.store__input {
+  margin-top: 1rem;
+}

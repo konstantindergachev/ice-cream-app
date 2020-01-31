@@ -1,0 +1,48 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: $seventh-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 2rem;
+  overflow: hidden;
+  font-family: 'Comfortaa', cursive;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 400;
+  margin: 0;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+h2,
+h4 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+.root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
